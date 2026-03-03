@@ -26,26 +26,7 @@ export default function CertificationsSection() {
       .catch(console.error);
   }, []);
 
-  useEffect(() => {
-    if (certs.length === 0) return;
-    gsap.registerPlugin(ScrollTrigger);
-
-    const ctx = gsap.context(() => {
-      gsap.from(".cert-card", {
-        y: 60,
-        opacity: 0,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 70%",
-        },
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, [certs]);
+  // No GSAP animation — cards render immediately and visibly
 
   if (certs.length === 0) return null;
 
@@ -61,26 +42,26 @@ export default function CertificationsSection() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {certs.map((cert, idx) => (
-            <a
+            <div
               key={idx}
-              href={cert.link || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cert-card group glass rounded-2xl overflow-hidden border border-white/5 hover:border-cyan/40 transition-all duration-300 hover:-translate-y-1"
+              className="cert-card rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] hover:border-cyan/40 transition-all duration-300 hover:-translate-y-1"
             >
               {/* Cert Image */}
-              <div className="relative h-44 overflow-hidden">
-                <img
-                  src={cert.image}
-                  alt={cert.title}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent"></div>
-                <div className="absolute top-3 right-3 glass flex h-8 w-8 items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
-                  <ExternalLink className="h-3 w-3 text-cyan" />
-                </div>
+              <div className="relative h-44 overflow-hidden bg-obsidian">
+                {cert.image ? (
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                ) : (
+                  <div className="h-full w-full flex items-center justify-center">
+                    <Award className="h-16 w-16 text-cyan/20" />
+                  </div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent"></div>
               </div>
 
               {/* Cert Info */}
@@ -88,21 +69,26 @@ export default function CertificationsSection() {
                 <div className="flex items-start gap-3">
                   <Award className="mt-0.5 h-5 w-5 flex-shrink-0 text-cyan" />
                   <div>
-                    <h3 className="text-sm font-bold uppercase tracking-wide leading-tight group-hover:text-cyan transition-colors">
+                    <h3 className="text-sm font-bold uppercase tracking-wide leading-tight text-white">
                       {cert.title}
                     </h3>
                     <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-slate-500">
                       {cert.issuer}
                     </p>
                     {cert.date && (
-                      <p className="mt-2 text-[10px] text-slate-600 uppercase tracking-widest">
+                      <p className="mt-2 text-[10px] text-slate-500 uppercase tracking-widest">
                         {cert.date}
                       </p>
+                    )}
+                    {cert.link && cert.link !== "#" && (
+                      <a href={cert.link} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-cyan hover:text-white transition-colors">
+                        Verify <ExternalLink className="h-3 w-3" />
+                      </a>
                     )}
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
