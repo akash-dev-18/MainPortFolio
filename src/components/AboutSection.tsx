@@ -217,7 +217,7 @@ export default function AboutSection() {
           {/* Right: Bio and Stats */}
           <div className="space-y-12 lg:col-span-7" ref={contentRef}>
             <div>
-              <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.5em] text-cyan">Identity_Sequence</h3>
+              <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.5em] text-cyan">WHOAMI</h3>
               <h2 className="mb-8 text-5xl font-bold tracking-tighter md:text-7xl uppercase">
                 {data.about.title}<br/><span className="font-light italic">{data.about.subtitle}</span>
               </h2>

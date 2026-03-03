@@ -54,7 +54,7 @@ export default function ProjectsSection() {
     <section id="projects" className="py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-20">
-          <h2 className="section-heading mb-4 text-right">LATEST_RUNS</h2>
+          <h2 className="section-heading mb-4 text-right">PROJECTS</h2>
           <div className="ml-auto h-1 w-24 bg-cyan"></div>
         </div>
 

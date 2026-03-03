@@ -79,11 +79,11 @@ export default function SkillsSection() {
             <div className="skills-heading flex flex-col items-start gap-4">
               <div className="flex items-center gap-4">
                 <span className="h-[1px] w-12 bg-cyan"></span>
-                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-cyan">Tech Neural Network</span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-cyan">SKILL SECTION</span>
               </div>
               <h1 className="section-heading">
-                TECH<br />
-                <span className="bg-gradient-to-r from-cyan to-purple bg-clip-text text-transparent">ECOSYSTEM</span>
+                TECHNICAL<br />
+                <span className="bg-gradient-to-r from-cyan to-purple bg-clip-text text-transparent">SKILLS</span>
               </h1>
             </div>
           </div>
