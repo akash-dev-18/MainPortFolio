@@ -1,0 +1,168 @@
+{
+  "settings": {
+    "name": "AKASH KUMAR",
+    "title": "Security-focused Backend Engineer",
+    "email": "akashl.dev2.ak@gmail.com",
+    "linkedin": "https://linkedin.com/in/sec_core",
+    "github": "https://github.com/akash",
+    "resumeUrl": "/AkashResume.pdf"
+  },
+  "theme": {
+    "primaryColor": "cyan",
+    "secondaryColor": "purple",
+    "accentColor": "emerald-500",
+    "systemStatus": "OPERATIONAL"
+  },
+  "hero": {
+    "heading1": "AKASH",
+    "heading2": "KUMAR",
+    "typewriterText": "Security-focused Backend Engineer. Building scalable backbones for Agentic AI systems.",
+    "button1Text": "VIEW ARTIFACTS",
+    "button2Text": "INITIALIZE PROTOCOL"
+  },
+  "about": {
+    "clearanceLevel": "LEVEL_04_ADMIN",
+    "specialization": "AGENTIC_BACKEND",
+    "location": "ODISHA_IN",
+    "title": "SCALABLE AI",
+    "subtitle": "BACKBONES",
+    "paragraph1": "I am a Security-focused Backend Engineer specializing in FastAPI and Spring Boot, designing high-performance microservices as the infrastructure for Agentic AI systems.",
+    "paragraph2": "From building bidirectional WebSockets for C2 frameworks to engineering RAG pipelines with LangChain and Qdrant, I bridge the gap between secure networking and advanced generative AI.",
+    "stat1": 3,
+    "stat1Label": "Yrs_Experience",
+    "stat2": 15,
+    "stat2Label": "Live_Projects",
+    "stat3": 20,
+    "stat3Label": "CTF Competitions"
+  },
+  "skills": [
+    {
+      "name": "FastAPI",
+      "color": 342411,
+      "size": 0.65,
+      "desc": "High-performance Python microservices. Async optimization & WebSocket expert.",
+      "image": "data:image/png;base64,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"
+    },
+    {
+      "name": "Spring Boot",
+      "color": 7189311,
+      "size": 0.6,
+      "desc": "Enterprise-grade Java backend development with deep security integration.",
+      "image": "/logos_transparent/linux3.png"
+    },
+    {
+      "name": "LangChain",
+      "color": 16096779,
+      "size": 0.55,
+      "desc": "AI agent orchestrations, RAG pipelines, and Multi-Agent Systems development.",
+      "image": "/logos_transparent/linux4.png"
+    },
+    {
+      "name": "Kubernetes",
+      "color": 3304677,
+      "size": 0.5,
+      "desc": "Scalable cluster management and high-availability systems engineering.",
+      "image": "/logos_transparent/linux5.png"
+    },
+    {
+      "name": "Docker",
+      "color": 1095953,
+      "size": 0.5,
+      "desc": "Container orchestration & environment isolation. Production-grade deployment.",
+      "image": "/logos_transparent/linux6.png"
+    },
+    {
+      "name": "C/C++",
+      "color": 22940,
+      "size": 0.45,
+      "desc": "Low-level system programming, WinAPI/Syscalls, and lightweight C2 agent development.",
+      "image": "/logos_transparent/linux7.png"
+    },
+    {
+      "name": "PostgreSQL",
+      "color": 3368849,
+      "size": 0.45,
+      "desc": "Relational database design, Hibernate integration, and persistent storage optimization.",
+      "image": "/logos_transparent/linux9.png"
+    },
+    {
+      "name": "Redis",
+      "color": 14167072,
+      "size": 0.4,
+      "desc": "In-memory data structures for high-concurrency caching and backend task queues.",
+      "image": "/logos_transparent/red.png"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Real-time C2 System",
+      "type": "BACKEND_SEC",
+      "desc": "Built a client-server system with bidirectional WebSocket communication and multi-threaded request handling. Implemented reverse shell, keylogging, and file drop features with persistent PostgreSQL storage.",
+      "tags": [
+        "Java",
+        "Spring Boot",
+        "WebSockets",
+        "Docker",
+        "PostgreSQL"
+      ],
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=2000",
+      "colorClass": "text-cyan",
+      "btnClass": "bg-cyan text-black",
+      "borderHoverClass": "hover:border-cyan",
+      "githubLink": "#",
+      "demoLink": "#"
+    },
+    {
+      "title": "DocuChat REST API",
+      "type": "RAG_AI",
+      "desc": "Developed a natural language query API for PDF documents using vector embeddings (Qdrant). Engineered synchronous and SSE streaming endpoints for context-aware session-based chat history.",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "LangChain",
+        "Qdrant",
+        "Docker"
+      ],
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=2000",
+      "colorClass": "text-purple",
+      "btnClass": "bg-purple text-white",
+      "borderHoverClass": "hover:border-purple",
+      "githubLink": "#",
+      "demoLink": "#"
+    },
+    {
+      "title": "Distributed C2 Network",
+      "type": "SYSTEM_AGENT",
+      "desc": "High-concurrency async FastAPI backend handling lightweight Windows C-agents executing raw Syscalls. Backend orchestrated via a Redis task queue secured with RBAC and JWT authentication.",
+      "tags": [
+        "C/C++",
+        "Python",
+        "FastAPI",
+        "Redis",
+        "WinAPI"
+      ],
+      "image": "https://images.unsplash.com/photo-1510511459019-5efa32d94cf0?auto=format&fit=crop&q=80&w=2000",
+      "colorClass": "text-emerald-500",
+      "btnClass": "bg-emerald-500 text-black",
+      "borderHoverClass": "hover:border-emerald-500",
+      "githubLink": "#",
+      "demoLink": "#"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "AWS Certified Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600",
+      "link": "#",
+      "date": "2025"
+    },
+    {
+      "title": "Certified Ethical Hacker (CEH)",
+      "issuer": "EC-Council",
+      "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600",
+      "link": "#",
+      "date": "2024"
+    }
+  ]
+}
