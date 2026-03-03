@@ -373,7 +373,7 @@ export default function AdminDashboard() {
               <h2 className="text-2xl font-bold tracking-widest uppercase">Project Artifacts</h2>
             </div>
             <button 
-              onClick={() => setData({...data, projects: [...data.projects, { title: "New Project", type: "APP", desc: "...", tags: ["React"], image: "", colorClass: "text-white", btnClass: "bg-white text-black", borderHoverClass: "hover:border-white", githubLink: "", demoLink: "" }]})}
+              onClick={() => setData({...data, projects: [...data.projects, { title: "New Project", type: "APP", desc: "...", tags: ["React"], colorClass: "text-white", btnClass: "bg-white text-black", borderHoverClass: "hover:border-white", githubLink: "", demoLink: "" }]})}
               className="flex items-center gap-2 text-xs font-bold text-emerald-500 hover:text-white uppercase tracking-widest"
             >
               <Plus className="w-4 h-4" /> Add Artifact
@@ -412,13 +412,7 @@ export default function AdminDashboard() {
                   }} className="w-full bg-white/5 border border-white/10 p-3 outline-none focus:border-emerald-500 text-sm text-slate-300" />
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-6 mb-6">
-                  <div>
-                    <label className="block text-[10px] font-bold text-slate-500 mb-2">IMAGE URL</label>
-                    <input value={project.image} onChange={e => {
-                        const newP = [...data.projects]; newP[idx].image = e.target.value; setData({...data, projects: newP});
-                    }} className="w-full bg-white/5 border border-white/10 p-2 outline-none focus:border-emerald-500 text-xs text-slate-400" />
-                  </div>
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label className="block text-[10px] font-bold text-slate-500 mb-2">GITHUB REPO</label>
                     <input value={project.githubLink} onChange={e => {
@@ -453,7 +447,7 @@ export default function AdminDashboard() {
               <h2 className="text-2xl font-bold tracking-widest uppercase">Certifications</h2>
             </div>
             <button 
-              onClick={() => setData({...data, certifications: [...(data.certifications || []), { title: "New Certification", issuer: "Issuer", image: "", link: "", date: "2025" }]})}
+              onClick={() => setData({...data, certifications: [...(data.certifications || []), { title: "New Certification", issuer: "Issuer", link: "", date: "2025" }]})}
               className="flex items-center gap-2 text-xs font-bold text-sky-500 hover:text-white uppercase tracking-widest"
             >
               <Plus className="w-4 h-4" /> Add Cert
@@ -485,13 +479,7 @@ export default function AdminDashboard() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-6 mt-4">
-                  <div>
-                    <label className="block text-[10px] font-bold text-slate-500 mb-2">IMAGE URL</label>
-                    <input value={cert.image} onChange={e => {
-                        const newC = [...data.certifications]; newC[idx].image = e.target.value; setData({...data, certifications: newC});
-                    }} className="w-full bg-white/5 border border-white/10 p-2 outline-none focus:border-sky-500 text-xs text-slate-400" />
-                  </div>
+                <div className="grid md:grid-cols-2 gap-6 mt-4">
                   <div>
                     <label className="block text-[10px] font-bold text-slate-500 mb-2">VERIFY LINK</label>
                     <input value={cert.link} onChange={e => {

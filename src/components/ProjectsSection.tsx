@@ -2,14 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { Github, ArrowRight, ArrowDownRight } from "lucide-react";
-import Image from "next/image";
 
 interface ProjectData {
   title: string;
   type: string;
   desc: string;
   tags: string[];
-  image: string;
+
   colorClass: string;
   btnClass: string;
   borderHoverClass: string;
@@ -58,7 +57,7 @@ export default function ProjectsSection() {
           <div className="ml-auto h-1 w-24 bg-cyan"></div>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-2">
           {projectsList.map((project, idx) => (
             <div
               key={idx}
@@ -68,39 +67,34 @@ export default function ProjectsSection() {
               className="project-card group relative rounded-2xl p-1 transition-all duration-500 glass"
               style={{ transformStyle: "preserve-3d" }}
             >
-              <div className="h-full overflow-hidden rounded-2xl bg-obsidian flex flex-col">
-                <div className="relative aspect-video overflow-hidden bg-electric">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover opacity-60 transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-obsidian to-transparent"></div>
-                  <div className="glass absolute left-4 top-4 rounded px-3 py-1 text-[10px] font-bold tracking-tighter">
+              <div className="overflow-hidden rounded-2xl bg-obsidian flex flex-row items-stretch">
+                {/* Left accent strip + badge */}
+                <div className="flex flex-col items-center justify-center gap-3 px-5 py-6 border-r border-white/5">
+                  <span className="glass rounded px-3 py-1 text-[10px] font-bold tracking-tighter whitespace-nowrap">
                     PROJECT_0{idx + 1}
-                  </div>
+                  </span>
+                  <span className={`text-[10px] font-bold ${project.colorClass}`}>[{project.type}]</span>
                 </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="mb-3 flex flex-wrap items-center justify-between gap-2 text-xl lg:text-2xl font-bold">
-                    <span>{project.title.toUpperCase()}</span>
-                    <span className={`text-[10px] ${project.colorClass}`}>[{project.type}]</span>
+                {/* Content */}
+                <div className="flex flex-1 flex-col p-5 gap-3">
+                  <h3 className="text-lg lg:text-xl font-bold leading-tight">
+                    {project.title.toUpperCase()}
                   </h3>
-                  <p className="mb-6 flex-1 text-sm leading-relaxed text-slate-400">
+                  <p className="text-sm leading-relaxed text-slate-400 line-clamp-2">
                     {project.desc}
                   </p>
-                  <div className="mb-6 flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {project.tags.map(tag => (
                       <span key={tag} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-tighter">
                         {tag}
                       </span>
                     ))}
                   </div>
-                  <div className="flex mt-auto gap-3">
-                    <a href={project.demoLink} className={`flex justify-center items-center flex-1 ${project.btnClass} py-2.5 text-center text-[10px] font-bold uppercase tracking-widest text-black transition-colors hover:bg-white`}>
+                  <div className="flex gap-3 mt-auto pt-1">
+                    <a href={project.demoLink} className={`flex justify-center items-center flex-1 ${project.btnClass} py-2 text-center text-[10px] font-bold uppercase tracking-widest text-black transition-colors hover:bg-white rounded`}>
                       Launch Demo
                     </a>
-                    <a href={project.githubLink} className={`glass flex h-10 w-10 shrink-0 items-center justify-center border-white/10 transition-colors ${project.borderHoverClass}`}>
+                    <a href={project.githubLink} className={`glass flex h-9 w-9 shrink-0 items-center justify-center border-white/10 transition-colors rounded ${project.borderHoverClass}`}>
                       <Github className="h-4 w-4" />
                     </a>
                   </div>
