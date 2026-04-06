@@ -257,7 +257,7 @@ export default function AboutSection() {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-6 pt-4">
-              <a href="/AkashResume.pdf" target="_blank" className="glass group flex items-center gap-3 px-8 py-4 text-[10px] font-bold uppercase tracking-widest transition-all hover:bg-white hover:text-black">
+              <a href={data.settings?.resumeUrl || "/AkashResume.pdf"} target="_blank" rel="noopener noreferrer" className="glass group flex items-center gap-3 px-8 py-4 text-[10px] font-bold uppercase tracking-widest transition-all hover:bg-white hover:text-black">
                 Download_Resume <Download className="h-3 w-3 transition-transform group-hover:translate-y-1" />
               </a>
               <a href="#certifications" className="border border-cyan/20 px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-cyan transition-all hover:bg-cyan/10">
